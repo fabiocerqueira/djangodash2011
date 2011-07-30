@@ -1,6 +1,11 @@
-from django.views.generic import ListView
+from django.views.generic import ListView,DetailView
+from django.shortcuts import get_object_or_404
 
 from activity.models import Event
+
+class EventDetailView(DetailView):
+    model = Event
+    context_object_name = "event"
 
 
 class DashboardListView(ListView):

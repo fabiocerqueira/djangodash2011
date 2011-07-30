@@ -13,6 +13,10 @@ class Event(models.Model):
     event_end = models.DateTimeField()
     hashtag = models.CharField(max_length=255, blank=True, help_text=_("hashtag separated by commas"))
 
+    @models.permalink
+    def get_absolute_url(self):
+        return ('activity_event', [self.slug])
+
     def __unicode__(self):
         return self.name
 
