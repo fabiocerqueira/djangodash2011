@@ -30,9 +30,6 @@ class Event(models.Model):
     def __unicode__(self):
         return self.name
 
-    def get_absolute_url(self):
-        pass
-
 
 class Presentation(models.Model):
     event = models.ForeignKey(Event)
