@@ -1,3 +1,4 @@
+{% load i18n %}
 <!doctype html>
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
 <!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
@@ -23,14 +24,19 @@
 <body>
 	<div id="header-container">
 		<header class="wrapper">
-			<h1 id="title">Pylestras</h1>
+			<h1 id="title"><a href="{% url homepage %}">Pylestras</a></h1>
 			<nav>
 				<ul>
-					<li><a href="#">Sobre</a></li>
-					<li><a href="#">Cadastro</a></li>
 					<li><a href="#">Eventos</a></li>
-                    <li><a href="#">Dashboard</a></li>
-				</ul>
+					<li><a href="#">Sobre</a></li>
+                    {% if user.is_authenticated %}
+                        <li><a href="{% url dashboard_index %}">{% trans "Dashboard" %}</a></li>
+                        <li><a href="{% url auth_logout %}">{% trans "Logout" %}</a></li>
+                    {% else %}
+                        <li><a href="{% url registration_register %}">{% trans "Sign Up" %}</a></li>
+					    <li><a href="{% url auth_login %}">{% trans "Login" %}</a></li>
+                    {% endif %}
+			    </ul>
 			</nav>
 		</header>
 	</div>
