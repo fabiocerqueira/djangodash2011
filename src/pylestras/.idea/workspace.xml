@@ -32,19 +32,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="urls.py" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="0" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0">
+            <state line="16" column="0" selection-start="489" selection-end="489" vertical-scroll-proportion="0.4173913">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="base.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="41" column="0" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.6857143">
+            <state line="34" column="41" selection-start="1139" selection-end="1139" vertical-scroll-proportion="-13.583333">
               <folding />
             </state>
           </provider>
@@ -432,13 +432,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="489" selection-end="489" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="0" selection-start="176" selection-end="333" vertical-scroll-proportion="0.0">
@@ -462,7 +455,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="0" selection-start="1250" selection-end="1250" vertical-scroll-proportion="0.6857143">
+        <state line="34" column="41" selection-start="1139" selection-end="1139" vertical-scroll-proportion="-13.583333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="0" selection-start="489" selection-end="489" vertical-scroll-proportion="0.4173913">
           <folding />
         </state>
       </provider>
