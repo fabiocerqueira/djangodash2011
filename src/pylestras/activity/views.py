@@ -1,7 +1,9 @@
-from django.views.generic import ListView,DetailView
+# -*- coding:utf-8 -*-
+from django.views.generic import ListView, DetailView
 from django.shortcuts import get_object_or_404
 
 from activity.models import Event
+
 
 class EventDetailView(DetailView):
     model = Event
@@ -14,3 +16,6 @@ class DashboardListView(ListView):
 
     def get_queryset(self):
         return Event.objects.filter(admin=self.request.user)
+
+
+#class DashboardAddEvent(
