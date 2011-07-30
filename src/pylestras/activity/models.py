@@ -11,11 +11,13 @@ class Event(models.Model):
     description = models.TextField()
     event_start = models.DateTimeField()
     event_end = models.DateTimeField()
-    price = models.DecimalField(max_digits=5, decimal_places=2)
     hashtag = models.CharField(max_length=255, blank=True, help_text=_("hashtag separated by commas"))
 
     def __unicode__(self):
         return self.name
+
+    def get_absolute_url(self):
+        pass
 
 
 class Presentation(models.Model):
