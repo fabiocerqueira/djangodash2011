@@ -15,10 +15,6 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-LOGIN_URL          = '/login-form/'
-LOGIN_REDIRECT_URL = '/'
-LOGIN_ERROR_URL    = '/login-error/'
-
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
@@ -145,6 +141,11 @@ LOGGING = {
 }
 
 APPEND_SLASH = True
+
+ACCOUNT_ACTIVATION_DAYS = 2
+EMAIL_HOST = 'localhost'
+DEFAULT_FROM_EMAIL = 'seu@email.com'
+LOGIN_REDIRECT_URL = '/'
 
 try:
     from local_settings import *

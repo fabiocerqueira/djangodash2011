@@ -3,13 +3,13 @@ Django Dash Project 2011
 
 Pylestras
 ---------
-Pylestras is a application for 
+Pylestras is a application for
 
 Team
 ----
 - Fábio Cerqueira
-- Mário Chaves
 - Italo Maia
+- Mário Chaves
 
 Evento
 ------
