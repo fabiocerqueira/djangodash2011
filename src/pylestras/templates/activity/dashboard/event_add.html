@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form}}
+    <p><input type="submit" value="Cadastrar" /></p>
+</form>
+{% endblock %}

@@ -10,4 +10,5 @@ urlpatterns = patterns('',
 #dashboard urls
 urlpatterns += patterns('',
     url(r'^dashboard/$', login_required(DashboardListView.as_view()), name="dashboard_index"),
+    url(r'^dashboard/event/add$', login_required(DashboardCreateEvent.as_view()), name="dashboard_create_event"),
 )
