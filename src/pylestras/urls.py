@@ -3,14 +3,20 @@ from django.conf.urls.defaults import patterns, include, url
 from django.conf.urls.static import static
 from django.conf import settings
 
-
 from django.contrib import admin
 admin.autodiscover()
+
+from django.views.generic.base import TemplateView
+
+
+class HomepageTeplateView(TemplateView):
+    template_name = 'index.html'
+
 
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^auth/', include('registration.urls')),
-    url(r'^$', include('core.urls', namespace='index')),
+    url(r'^$', HomepageTeplateView.as_view()),
 )
 
 if settings.DEBUG:
