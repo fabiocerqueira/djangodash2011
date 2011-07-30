@@ -3,5 +3,5 @@
 *.db
 *.swp
 local_settings.py
-src/pylestras/.idea/*
+.idea
 .DS_Store
