@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <div class="grid_8">
+    <div class="grid_8 content">
         {% for presentation in presentations %}
             <h3>{{ presentation.title }}</h3>
             <p>{{ presentation.speaker }}</p>
@@ -12,7 +12,7 @@
         {% endfor %}
     </div>
 
-    <div class="grid_4">
+    <div class="grid_4 aside">
         {% for event in events %}
         <h3>Events</h3>
         <p>

@@ -18,7 +18,48 @@ audio[controls], canvas, video { display: inline-block; *display: inline; *zoom:
  * Pylestras
  */
 
+.header {
+    background-color: #f0f0f0;
+}
+
+.header .title {
+    margin: 20px;
+}
+
+.nav {
+    background-color: #f0f0f0;
+    margin: 15px 10px 15px 10px;
+}
+
+.nav a {
+    display: block;
+    float: left;
+    padding: 10px 15px 10px 15px;
+    border-right: solid 1px #ddd;
+}
+
+.nav a:hover {
+    background: #d8d8d8;
+}
+
+.content {
+    background-color: #f0f0f0;
+}
+
+.aside {
+    background-color: #fff;
+}
+
+.footer {
+    background-color: #f0f0f0;
+    margin-top: 15px
+}
+
+.footer address {
+    margin: 10px;
+}
+
 .date_event {
     font-size: 0.8em;
-    color: #ffff99;
+    color: #555;
 }

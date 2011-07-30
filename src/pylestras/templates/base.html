@@ -29,27 +29,24 @@
     <div class="container_12">
 
         <!-- Header -->
-        <div class="grid_8">
-            <h1 id="title">
+        <div class="grid_12 header">
+            <h1 class="title">
                 <img src="{{ STATIC_URL }}img/logo_pylstr.png" alt="Pylestras" title="Pylestras">
                 <a href="{% url homepage %}">Pylestras</a>
             </h1>
         </div>
-        <div class="grid_4">
-            Login
-        </div>
         <div class="clear"></div>
 
         <!-- Main menu -->
-        <div class="grid_12">
-            <a href="#">Eventos</a> |
+        <div class="grid_12 nav">
+            <a href="#">Eventos</a>
             <a href="#">Sobre</a>
             {% if user.is_authenticated %}
-             | <a href="{% url dashboard_index %}">{% trans "Dashboard" %}</a>
-             | <a href="{% url auth_logout %}">{% trans "Logout" %}</a>
+            <a href="{% url dashboard_index %}">{% trans "Dashboard" %}</a>
+            <a href="{% url auth_logout %}">{% trans "Logout" %}</a>
             {% else %}
-             | <a href="{% url registration_register %}">{% trans "Sign Up" %}</a>
-             | <a href="{% url auth_login %}">{% trans "Login" %}</a>
+            <a href="{% url registration_register %}">{% trans "Sign Up" %}</a>
+            <a href="{% url auth_login %}">{% trans "Login" %}</a>
             {% endif %}
         </div>
 
@@ -58,8 +55,10 @@
         <div class="clear"></div>
 
         <!-- Footer -->
-        <div class="grid_12">
-            Footer
+        <div class="grid_12 footer">
+            <address>
+                &copy; Django Dash 2011 by Carroça Team
+            </address>
         </div>
 
     </div>
