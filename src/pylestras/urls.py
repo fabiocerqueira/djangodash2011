@@ -20,9 +20,14 @@ class HomepageTeplateView(TemplateView):
 
         events = Event.objects.order_by('-event_start')
         context['events'] = events
-        
-        presentations = Presentation.objects.filter(event=Event.objects.latest('event_start'))
+        try:
+            lastest_event = Event.objects.latest('event_start')
+        except Event.DoesNotExist:
+            lastest_event = None
+
+        presentations = Presentation.objects.filter(event=lastest_event)
         context['presentations'] = presentations
+        context['lastest_event'] = lastest_event
 
         return context
 
