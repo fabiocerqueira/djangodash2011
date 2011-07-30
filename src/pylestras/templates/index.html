@@ -1,24 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
-<aside>
-    {% for event in events %}
+
+    <div class="grid_8">
+        {% for presentation in presentations %}
+            <h3>{{ presentation.title }}</h3>
+            <p>{{ presentation.speaker }}</p>
+            <p>{{ presentation.description }}</p>
+        {% empty %}
+            <h3>Empty</h3>
+            <p>Data not found.</p>
+        {% endfor %}
+    </div>
+
+    <div class="grid_4">
+        {% for event in events %}
         <h3>Events</h3>
         <p>
             <a href="{{ event.get_absolute_url }}">{{ event.name }}</a><br />
             <span class="date_event">{{ event.event_start }}</span>
         </p>
-    {% empty %}
-        <h3>Empty</h3>
-    {% endfor %}
-</aside>
-<article>
-    {% for presentation in presentations %}
-        <h3>{{ presentation.title }}</h3>
-        <p>{{ presentation.speaker }}</p>
-        <p>{{ presentation.description }}</p>
-    {% empty %}
-        <h3>Empty</h3>
-        <p>Data not found.</p>
-    {% endfor %}
-</article>
+        {% empty %}
+            <h3>Empty</h3>
+        {% endfor %}
+    </div>
+
 {% endblock %}
