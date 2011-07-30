@@ -17,7 +17,7 @@ urlpatterns = patterns('',
     url(r'^activity/', include('activity.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^account/', include('registration.urls')),
-    url(r'^$', HomepageTeplateView.as_view()),
+    url(r'^$', HomepageTeplateView.as_view(), name='homepage'),
 )
 
 if settings.DEBUG:
