@@ -24,7 +24,10 @@
 <body>
 	<div id="header-container">
 		<header class="wrapper">
-			<h1 id="title"><a href="{% url homepage %}">Pylestras</a></h1>
+			<h1 id="title">
+                <img src="{{ STATIC_URL }}img/logo_pylstr.png" alt="Pylestras" title="Pylestras">
+                <a href="{% url homepage %}">Pylestras</a>
+            </h1>
 			<nav>
 				<ul>
 					<li><a href="#">Eventos</a></li>
