@@ -14,8 +14,9 @@ class HomepageTeplateView(TemplateView):
 
 
 urlpatterns = patterns('',
+    url(r'^activity/', include('activity.urls')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^auth/', include('registration.urls')),
+    url(r'^account/', include('registration.urls')),
     url(r'^$', HomepageTeplateView.as_view()),
 )
 
