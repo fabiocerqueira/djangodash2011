@@ -10,6 +10,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^auth/', include('registration.urls')),
+    url(r'^$', include('core.urls', namespace='index')),
 )
 
 if settings.DEBUG:
