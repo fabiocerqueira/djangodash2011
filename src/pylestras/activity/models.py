@@ -1,6 +1,7 @@
 # -*- coding:utf-8 -*-
 from django.db import models
 from django.contrib.auth.models import User
+from django.template.defaultfilters import slugify
 from django.utils.translation import ugettext_lazy as _
 
 
@@ -15,7 +16,16 @@ class Event(models.Model):
 
     @models.permalink
     def get_absolute_url(self):
-        return ('activity_event', [self.slug])
+        return ('activity_event', (), {
+            'slug': self.slug,
+            'year': self.event_start.year,
+            'month': self.event_start.month,
+            'day': self.event_start.day,
+        })
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.name)
+        super(Event, self).save(*args, **kwargs)
 
     def __unicode__(self):
         return self.name
