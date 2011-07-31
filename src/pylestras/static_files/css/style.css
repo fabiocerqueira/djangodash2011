@@ -18,6 +18,18 @@ audio[controls], canvas, video { display: inline-block; *display: inline; *zoom:
  * Pylestras
  */
 
+body {
+    font-family: "Trebuchet MS", Arial, Verdana, sans-serif;
+}
+
+a {
+    color: #228b22;
+    text-decoration: none;
+}
+a:hover {
+    color: #4169e1;
+}
+
 .border_radius_all {
     border-radius: 10px;
     -moz-border-radius: 10px;
@@ -31,6 +43,8 @@ audio[controls], canvas, video { display: inline-block; *display: inline; *zoom:
 
 .header .title {
     margin: 20px;
+    font-family: 'Dancing Script', serif;
+    font-size: 3.7em;
 }
 
 .nav {
@@ -46,7 +60,16 @@ audio[controls], canvas, video { display: inline-block; *display: inline; *zoom:
 }
 
 .nav a:hover {
-    background: #d8d8d8;
+    background: #f5f5f5;
+}
+
+.nav a:first-child {
+    border-top-left-radius: 10px;
+    -moz-border-radius-topleft: 10px;
+    -webkit-border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    -moz-border-radius-bottomleft: 10px;
+    -webkit-border-bottom-left-radius: 10px;
 }
 
 .content {
@@ -86,4 +109,8 @@ audio[controls], canvas, video { display: inline-block; *display: inline; *zoom:
 
 .home_event_title {
     margin-bottom: 0;
+}
+
+.event_title_a {
+    font-size: 1.2em;
 }

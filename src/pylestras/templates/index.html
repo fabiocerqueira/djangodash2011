@@ -15,7 +15,7 @@
         {% for event in events %}
         <h3 class="home_event_title">Events</h3>
         <p>
-            <a href="{{ event.get_absolute_url }}">{{ event.name }}</a><br />
+            <a class="event_title_a" href="{{ event.get_absolute_url }}">{{ event.name }}</a><br />
             <span class="date_event">{{ event.event_start }}</span>
         </p>
         {% empty %}
