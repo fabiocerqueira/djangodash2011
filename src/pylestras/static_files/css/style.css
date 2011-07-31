@@ -99,6 +99,14 @@ input:focus, textarea:focus {
     -webkit-box-shadow: rgba(0,0,0, 0.1) 0 0 8px;
 }
 
+input[type=submit] {
+    color: #228b22;
+    padding: 7px;
+    font-weight: bold;
+    margin-top: 10px;
+    float: right;
+}
+
 /**
  * Site
  */
@@ -118,6 +126,7 @@ input:focus, textarea:focus {
     margin: 20px;
     font-family: 'Dancing Script', serif;
     font-size: 3.7em;
+    text-shadow: 0 2px 0 #FCF9EE, 0 4px 0 rgba(0, 0, 0, .15);
 }
 
 .nav {
@@ -178,6 +187,8 @@ input:focus, textarea:focus {
 
 .pres_title {
     margin: 10px 0 0 10px;
+    text-shadow: 0 2px 0 #FCF9EE, 0 4px 0 rgba(0, 0, 0, .15);
+    font-style: italic;
 }
 
 .pres_speaker {
@@ -193,6 +204,8 @@ input:focus, textarea:focus {
     margin-top: 10px;
     margin-left: 10px;
     margin-bottom: 0;
+    text-shadow: 0 2px 0 #FCF9EE, 0 4px 0 rgba(0, 0, 0, .15);
+    font-style: italic;
 }
 
 .event_title_a {
