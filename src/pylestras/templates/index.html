@@ -6,20 +6,20 @@
             <p class="pres_speaker">{{ presentation.speaker }}</p>
             <p class="pres_description">{{ presentation.description }}</p>
         {% empty %}
-            <h3>Empty</h3>
-            <p>Data not found.</p>
+            <h3 class="pres_title">Empty</h3>
+            <p class="pres_speaker">Data not found.</p>
         {% endfor %}
     </div>
 
-    <div class="grid_4 aside">
-        {% for event in events %}
+    <div class="grid_4 aside border_radius_all">
         <h3 class="home_event_title">Events</h3>
-        <p>
+        {% for event in events %}
+        <p class="home_event_list">
             <a class="event_title_a" href="{{ event.get_absolute_url }}">{{ event.name }}</a><br />
             <span class="date_event">{{ event.event_start }}</span>
         </p>
         {% empty %}
-            <h3>Empty</h3>
+            <p class="home_event_list">Empty</p>
         {% endfor %}
     </div>
 
