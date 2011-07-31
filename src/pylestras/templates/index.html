@@ -1,26 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="grid_8 content border_radius_all">
-        {% for presentation in presentations %}
-            <h3 class="pres_title">{{ presentation.title }}</h3>
-            <p class="pres_speaker">{{ presentation.speaker }}</p>
-            <p class="pres_description">{{ presentation.description }}</p>
-        {% empty %}
-            <h3 class="pres_title">Empty</h3>
-            <p class="pres_speaker">Data not found.</p>
-        {% endfor %}
-    </div>
-
-    <div class="grid_4 aside border_radius_all">
-        <h3 class="home_event_title">Events</h3>
-        {% for event in events %}
-        <p class="home_event_list">
-            <a class="event_title_a" href="{{ event.get_absolute_url }}">{{ event.name }}</a><br />
-            <span class="date_event">{{ event.event_start }}</span>
-        </p>
-        {% empty %}
-            <p class="home_event_list">Empty</p>
-        {% endfor %}
-    </div>
-
+    {% for presentation in presentations %}
+        <h3 class="pres_title">{{ presentation.title }}</h3>
+        <p class="pres_speaker">{{ presentation.speaker }}</p>
+        <p class="pres_description">{{ presentation.description }}</p>
+    {% empty %}
+        <h3 class="pres_title">Empty</h3>
+        <p class="pres_speaker">Data not found.</p>
+    {% endfor %}
 {% endblock %}

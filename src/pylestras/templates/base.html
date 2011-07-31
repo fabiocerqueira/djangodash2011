@@ -54,11 +54,14 @@
         {% if messages %}
         <ul class="grid_12 messages">
             {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
             {% endfor %}
         </ul>
         {% endif %}
-        {% block content %}{% endblock %}
+        <div class="grid_8 content border_radius_all">
+            {% block content %}{% endblock %}
+        </div>
+        {% include "snippets/last_events.html" %}
         <div class="clear"></div>
 
         <!-- Footer -->

@@ -1,0 +1,11 @@
+<div class="grid_4 aside border_radius_all">
+<h3 class="home_event_title">Events</h3>
+{% for event in events %}
+<p class="home_event_list">
+    <a class="event_title_a" href="{{ event.get_absolute_url }}">{{ event.name }}</a><br />
+    <span class="date_event">{{ event.event_start }}</span>
+</p>
+{% empty %}
+    <p class="home_event_list">Empty</p>
+{% endfor %}
+</div>
