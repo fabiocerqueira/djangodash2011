@@ -83,3 +83,7 @@ audio[controls], canvas, video { display: inline-block; *display: inline; *zoom:
 .pres_description {
     margin: 10px;
 }
+
+.home_event_title {
+    margin-bottom: 0;
+}

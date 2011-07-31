@@ -13,7 +13,7 @@
 
     <div class="grid_4 aside">
         {% for event in events %}
-        <h3>Events</h3>
+        <h3 class="home_event_title">Events</h3>
         <p>
             <a href="{{ event.get_absolute_url }}">{{ event.name }}</a><br />
             <span class="date_event">{{ event.event_start }}</span>
