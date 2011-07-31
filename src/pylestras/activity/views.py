@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 from django.views.generic import ListView, DetailView, CreateView
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib import messages
 from django.utils.translation import ugettext_lazy as _
 from django.template import RequestContext
@@ -63,6 +63,6 @@ def add_presentation_view(request, event_id):
         instance = form.save(commit=False)
         instance.event = event_ins
         instance.save()
-        return redirect(event_inst.get_absolute_url())
+        return redirect(event_ins.get_absolute_url())
     else:
         return render(request, "activity/dashboard/add_presentation.html", {"form": form})
