@@ -2,12 +2,10 @@
 {% load i18n %}
 
 {% block content %}
-<div class="grid_12">
     {% if account %}
-        <p>{% trans "Account successfully activated" %}</p>
-        <p><a href="{% url auth_login %}">{% trans "Log in" %}</a></p>
+        <h3 class="pres_title">{% trans "Account successfully activated" %}</h3>
+        <p class="pres_speaker"><a href="{% url auth_login %}">{% trans "Log in" %}</a></p>
     {% else %}
-        <p>{% trans "Account activation failed" %}</p>
+        <h3 class="pres_title">{% trans "Account activation failed" %}</h3>
     {% endif %}
-</div>
 {% endblock %}
