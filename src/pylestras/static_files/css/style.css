@@ -185,15 +185,15 @@ input[type=submit] {
 }
 
 .content {
-    background-color: #fdf5e6;
+    background-color: #FFF4DB;
 }
 
 .aside {
-    background-color: #f5f5f5;
+    background-color: #EDF0F3;
 }
 
 .footer {
-    background-color: #f0f0f0;
+    background-color: #EDF0F3;
     margin-top: 15px;
     color: #999;
     font-size: 0.9em;
