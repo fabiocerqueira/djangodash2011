@@ -18,8 +18,9 @@ class HomepageTeplateView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super(HomepageTeplateView, self).get_context_data(**kwargs)
 
-        events = Event.objects.order_by('-event_start')
+        events = Event.objects.order_by('-event_start')[:10]
         context['events'] = events
+
         try:
             lastest_event = Event.objects.latest('event_start')
         except Event.DoesNotExist:
