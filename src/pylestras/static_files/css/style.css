@@ -117,6 +117,12 @@ input[type=submit] {
     -webkit-border-radius: 10px;
 }
 
+.box_shadow_default {
+    -moz-box-shadow: 3px 3px 3px #ccc;
+    -webkit-box-shadow: 3px 3px 3px #ccc;
+    box-shadow: 3px 3px 3px #ccc;
+}
+
 .header {
     margin-top: 10px;
 

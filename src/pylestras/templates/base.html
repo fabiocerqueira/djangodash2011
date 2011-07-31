@@ -29,7 +29,7 @@
 
     <div class="container_12">
         <!-- Header -->
-        <div class="grid_12 header border_radius_all">
+        <div class="grid_12 header border_radius_all box_shadow_default">
             <h1 class="title">
                 <img src="{{ STATIC_URL }}img/logo_pylstr.png" alt="Pylestras" title="Pylestras">
                 <a href="{% url homepage %}">Pylestras</a>
@@ -38,7 +38,7 @@
         <div class="clear"></div>
 
         <!-- Main menu -->
-        <div class="grid_12 nav border_radius_all">
+        <div class="grid_12 nav border_radius_all box_shadow_default">
             <a href="#">Eventos</a>
             <a href="#">Sobre</a>
             {% if user.is_authenticated %}
@@ -58,14 +58,14 @@
             {% endfor %}
         </ul>
         {% endif %}
-        <div class="grid_8 content border_radius_all">
+        <div class="grid_8 content border_radius_all box_shadow_default">
             {% block content %}{% endblock %}
         </div>
         {% include "snippets/last_events.html" %}
         <div class="clear"></div>
 
         <!-- Footer -->
-        <div class="grid_12 footer border_radius_all">
+        <div class="grid_12 footer border_radius_all box_shadow_default">
             <address>
                 &copy; Django Dash 2011 by Carroça Team
             </address>
