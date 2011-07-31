@@ -1,10 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="grid_8 content">
+    <div class="grid_8 content border_radius_all">
         {% for presentation in presentations %}
-            <h3>{{ presentation.title }}</h3>
-            <p>{{ presentation.speaker }}</p>
-            <p>{{ presentation.description }}</p>
+            <h3 class="pres_title">{{ presentation.title }}</h3>
+            <p class="pres_speaker">{{ presentation.speaker }}</p>
+            <p class="pres_description">{{ presentation.description }}</p>
         {% empty %}
             <h3>Empty</h3>
             <p>Data not found.</p>

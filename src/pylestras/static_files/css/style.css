@@ -18,7 +18,14 @@ audio[controls], canvas, video { display: inline-block; *display: inline; *zoom:
  * Pylestras
  */
 
+.border_radius_all {
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+}
+
 .header {
+    margin-top: 10px;
     background-color: #f0f0f0;
 }
 
@@ -62,4 +69,17 @@ audio[controls], canvas, video { display: inline-block; *display: inline; *zoom:
 .date_event {
     font-size: 0.8em;
     color: #555;
+}
+
+.pres_title {
+    margin: 10px 0 0 10px;
+}
+
+.pres_speaker {
+    margin: 0 0 10px 10px;
+    color: #777;
+}
+
+.pres_description {
+    margin: 10px;
 }
