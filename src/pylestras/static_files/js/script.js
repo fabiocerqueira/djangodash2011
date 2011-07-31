@@ -8,5 +8,9 @@ $(document).ready(function(){
 
     // Foca no primeiro input de qualquer form.
     $("form").find("input:visible:first").focus();
-    
+
+    // Escondendo ID e Event do formset add presentation
+    $('label[for$="event"]').hide();
+    $('label[for$="id"]').hide();
+
 });

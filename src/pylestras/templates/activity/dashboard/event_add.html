@@ -3,15 +3,27 @@
 {% load i18n %}
 
 {% block content %}
-<div class="grid_12">
+<h3 class="pres_title">Add event</h3>
+<div class="pres_description">
 <form method="post" action="">{% csrf_token %}
+
     <table>
-        {{ form.as_table }}
-        {{ presentation_formset.as_table }}
+        {% include "snippets/form.html" %}
         <tr>
             <td colspan="2"><input type="submit" value="{% trans 'Submit' %}" /></td>
         </tr>
     </table>
+
+    {{ presentation_formset.management_form }}
+    <table>
+        {% for form in presentation_formset %}
+            {% include "snippets/form.html" %}
+        {% endfor %}
+        <tr>
+            <td colspan="2"><input type="submit" value="{% trans 'Submit' %}" /></td>
+        </tr>
+    </table>
+
 </form>
 </div>
 {% endblock %}
