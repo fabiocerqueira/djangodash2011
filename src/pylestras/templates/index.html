@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
     {% for presentation in presentations %}
-        <h3 class="pres_title">{{ presentation.title }}</h3>
+        <h3 class="pres_title"><a href="{% url presentation_event presentation.pk %}">{{ presentation.title }}</a></h3>
         <p class="pres_speaker">{{ presentation.speaker }}</p>
         <p class="pres_description">{{ presentation.description }}</p>
     {% empty %}
