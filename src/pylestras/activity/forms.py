@@ -8,6 +8,11 @@ class EventCreateForm(ModelForm):
         model = Event
         exclude = ('admin', 'slug')
 
+class PresentationCreateForm(ModelForm):
+    class Meta:
+        model = Presentation
+        exclude = ('event',)
+
 PresentationFormSet = inlineformset_factory(
     Event,
     Presentation,

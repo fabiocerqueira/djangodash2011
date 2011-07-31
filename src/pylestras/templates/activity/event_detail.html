@@ -3,5 +3,8 @@
 {% block content %}
     <div class="grid_12">
         <h2>{{ event.name }}</h2>
+        {% if user == event.admin %}
+        <a href='{% url dashboard_add_presentation event.id %}'>Add new presentation</a>
+        {% endif %}
     </div>
 {% endblock %}

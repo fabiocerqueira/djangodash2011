@@ -1,12 +1,12 @@
 # -*- coding:utf-8 -*-
 from django.views.generic import ListView, DetailView, CreateView
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, render
 from django.contrib import messages
 from django.utils.translation import ugettext_lazy as _
 from django.template import RequestContext
 
 from activity.models import Event, Presentation
-from activity.forms import EventCreateForm, PresentationFormSet
+from activity.forms import EventCreateForm, PresentationFormSet, PresentationCreateForm
 
 
 class EventDetailView(DetailView):
@@ -38,7 +38,7 @@ class DashboardCreateEvent(CreateView):
             self.object.save()
             presentation_formset.instance = self.object
             presentation_formset.save()
-            messages.success(self.request, _('Event %s registered successfully!') % self.object.name)
+            messages.success(self.request, _('%s registered successfully!') % self.object.name)
             return super(DashboardCreateEvent, self).form_valid(form)
         else:
             return self.render_to_response(self.get_context_data(form=form))
@@ -53,3 +53,16 @@ class DashboardCreateEvent(CreateView):
         else:
             context['presentation_formset'] = PresentationFormSet()
         return context
+
+
+def add_presentation_view(request, event_id):
+    event_ins = get_object_or_404(Event, pk=event_id, admin=request.user)
+    form = PresentationCreateForm(request.method == "POST" and request.POST or None)
+
+    if request.method == "POST" and form.is_bound:
+        instance = form.save(commit=False)
+        instance.event = event_ins
+        instance.save()
+        return redirect(event_inst.get_absolute_url())
+    else:
+        return render(request, "activity/dashboard/add_presentation.html", {"form": form})
