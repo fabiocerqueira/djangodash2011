@@ -3,11 +3,15 @@
 {% load i18n %}
 
 {% block content %}
-    <h3>Events</h3>
+    <h3 class="pres_title">Events</h3>
+    {% if event_list %}
     <ul>
         {% for event in event_list %}
             <li>{{ event.name }}</li>
         {% endfor %}
     </ul>
+    {% else %}
+    <p class="pres_speaker">No events found.</p>
+    {% endif %}
     <a href="{% url dashboard_create_event %}">{% trans "Add new Event" %}</a>
 {% endblock %}
