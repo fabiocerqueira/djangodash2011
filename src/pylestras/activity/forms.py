@@ -6,10 +6,10 @@ from activity.models import Event, Presentation
 class EventCreateForm(ModelForm):
     class Meta:
         model = Event
-        exclude = ('admin', 'slug') 
+        exclude = ('admin', 'slug')
 
-
-PresentationFormSet = inlineformset_factory(Event,
+PresentationFormSet = inlineformset_factory(
+    Event,
     Presentation,
     can_delete=False,
-    extra=3)
+)
