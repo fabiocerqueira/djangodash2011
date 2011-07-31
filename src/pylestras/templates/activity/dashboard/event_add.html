@@ -3,6 +3,7 @@
 {% load i18n %}
 
 {% block content %}
+<div class="grid_12">
 <form method="post" action="">{% csrf_token %}
     <table>
         {{ form.as_table }}
@@ -11,4 +12,5 @@
         </tr>
     </table>
 </form>
+</div>
 {% endblock %}
