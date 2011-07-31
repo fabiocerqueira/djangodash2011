@@ -2,6 +2,7 @@
 from django.views.generic import ListView, DetailView, CreateView
 from django.shortcuts import get_object_or_404
 from django.contrib import messages
+from django.utils.translation import ugettext_lazy as _
 
 from activity.models import Event, Presentation
 from activity.forms import EventCreateForm
@@ -31,6 +32,6 @@ class DashboardCreateEvent(CreateView):
         self.object = form.save(commit=False)
         self.object.admin = self.request.user
         self.object.save()
-        messages.success(self.request, 'Event %s registered successfully!' % self.object.name)
+        messages.success(self.request, _('Event %s registered successfully!') % self.object.name)
         return super(DashboardCreateEvent, self).form_valid(form)
         
