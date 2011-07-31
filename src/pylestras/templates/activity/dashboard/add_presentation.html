@@ -1,12 +1,17 @@
 {% extends "base.html" %}
 
+{% load i18n %}
+
 {% block content %}
-    <div class="grid_12">
-        <form method="post">
-            <table>
-            {{ form.as_table }}
-            </table>
-        <input type="submit" value="Send" />
-        </form>
+    <div class="grid_8">
+    <form method="post" action="">{% csrf_token %}
+        <table>
+            {% include "snippets/form.html" %}
+            <tr>
+                <td colspan="2"><input type="submit" value="{% trans 'Submit' %}" /></td>
+            </tr>
+        </table>
+    </form>
+
     </div>
 {% endblock %}
