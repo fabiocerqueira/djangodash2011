@@ -57,12 +57,13 @@ class DashboardCreateEvent(CreateView):
 
 def add_presentation_view(request, event_id):
     event_ins = get_object_or_404(Event, pk=event_id, admin=request.user)
-    form = PresentationCreateForm(request.method == "POST" and request.POST or None)
-
-    if request.method == "POST" and form.is_bound:
-        instance = form.save(commit=False)
-        instance.event = event_ins
-        instance.save()
-        return redirect(event_ins.get_absolute_url())
+    if request.method == "POST":
+        form = PresentationCreateForm(request.POST)
+        if form.is_bound and form.is_valid():
+            instance = form.save(commit=False)
+            instance.event = event_ins
+            instance.save()
+            return redirect(event_ins.get_absolute_url())
     else:
-        return render(request, "activity/dashboard/add_presentation.html", {"form": form})
+        form = PresentationCreateForm()
+    return render(request, "activity/dashboard/add_presentation.html", {"form": form})
